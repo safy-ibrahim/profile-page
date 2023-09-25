@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// كل الكومبوننتس الي هعملها بعد كدا هحطها ف الابب
+// اي كومبوننت بيكون عبارة عن كلاس وجواه ستيت وريندر 
+// الاستيت فيها الداتا اما الريندر هو اللي هيظهرلي الفيو الخاص بالكومبوننت دا
+// //  ديما اي كومبوننت ف الرياكت بيورث من كومبوننت تاني موجود باي ديفولت ف الرياكت اسمه كومبوننت
+import { Component } from "react";
+import { Home } from "./Home"; // بعد ما عملت امبورت للهوم ببقى عايزه احط السيلكتور جوا الريندر
+import { About } from "./About";
+import {Skills} from './Skills'
+import { Footer } from "./Footer";
+import { Portfolio } from "./Portfolio";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+export class App extends Component{
+  state = {}
+  render() // الميثود ريندر مش بتعمل ريترن غير لحاجه واحده ولذلك بعمل ايليمنت واحد زي الديف واحط فيه اللي انا عايززاه
+  {
+   return (
+    <div>
+      <Home/>
+      <About></About>
+      <Skills></Skills>
+      <Portfolio></Portfolio>
+      <Footer></Footer>
+
+
     </div>
-  );
+   )
+
+  }
+
 }
 
-export default App;
+// الملف دا فيه الاابب كومبوننت وفيه كود ال اتش تي ام ال اللي بيظهر
+// الملف دا اللي بيخله ظاهر هو اني بحط السيلكتور بتاعه جوا الديف بتاع الرروت من خلال الاندكس جي اس
+
+// بحط هنا قوسين للريترن لان المفروض اللي هترجعه يبقى جنبها ف نفس السطر لو شيلت الاقواس مش هترجعلي حاجه
